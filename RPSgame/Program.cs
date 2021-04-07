@@ -7,6 +7,19 @@ namespace RPSgame
     {
         static int Main(string[] arg)
         {
+            int rep = 1;
+            for (int i = 0; i < arg.Length; i++)
+            {
+                for (; rep <arg.Length;rep++)
+                {
+                    if(arg[i] == arg[rep])
+                    {
+                        Console.WriteLine("Repeated names");
+                        return 0;
+                    }
+                }
+                rep++;
+            }
             if (arg.Length % 2 == 0 || arg.Length == 1)
             {
                 Console.WriteLine("Need to enter ood number >= 3");
